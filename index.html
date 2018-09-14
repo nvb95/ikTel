@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ikTel</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="application-name" content="ikTel">
+  <meta name="apple-mobile-web-app-title" content="ikTel">
+  <meta name="msapplication-starturl" content="starturl">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="msapplication-TileImage" content="icon/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+
+  <link rel="icon" type="image/png" sizes="128x128" href="icon/icon-128x128.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="icon/icon-128x128.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="icon/icon-144x144.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="icon/icon-144x144.png">
+  <link rel="icon" type="image/png" sizes="152x152" href="icon/icon-152x152.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="icon/icon-152x152.png">
+  <link rel="icon" type="image/png" sizes="167x167" href="icon/icon-167x167.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="icon/icon-167x167.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="icon/icon-180x180.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="icon/icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon/icon-192x192.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="icon/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="icon/icon-256x256.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="icon/icon-256x256.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="icon/icon-512x512.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="icon/icon-512x512.png">
+
+  <!-- iPhone X (1125px x 2436px) -->
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="/apple-launch-1125x2436.png">
+  <!-- iPhone 8, 7, 6s, 6 (750px x 1334px) -->
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-750x1334.png">
+  <!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="/apple-launch-1242x2208.png">
+  <!-- iPhone 5 (640px x 1136px) -->
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-640x1136.png">
+  <!-- iPad Mini, Air (1536px x 2048px) -->
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-1536x2048.png">
+  <!-- iPad Pro 10.5" (1668px x 2224px) -->
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-1668x2224.png">
+  <!-- iPad Pro 12.9" (2048px x 2732px) -->
+  <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-2048x2732.png">
+  <link href="splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+</head>
+
+<body onload="initializeElements()">
+  <header id=header class="header">
+    <select id="voiceDropDown" onchange="telOrTelt()">
+      <option value="Siri">ik</option>
+      <option value="NielsVanBelle" >Niels</option>
+    </select>
+    <output id="telOrTeltText"> </output>
+  </header>
+  <div id="main" class="main">
+    <div id="printDiv">
+      <output id="print" class="output"> ikTel </output>
+    </div>
+    <div>
+      <label> Tellen: </label>
+      <output id="tellenText" class="output"> </output>
+    </div>
+    <div class="crementableRangeSlider">
+      <button id="tellenDecrement" onclick="decrementTellen()"> - </button>
+      <input id="tellenRangeSlider" type="range" min="0" max="99" value="15" step="1" oninput="slideTellenRangeSlider()">
+      <button id="tellenIncrement" onclick="incrementTellen()"> + </button>
+    </div>
+    <div>
+      <label> Pauze tussen tellen: </label>
+      <output id="pauseDurationText" class="output"> </output>
+      <label> s </label>
+    </div>
+    <div class="crementableRangeSlider">
+      <button id="pauseDurationDecrement" onclick="decrementPauseDuration()"> - </button>
+      <input id="pauseDurationRangeSlider" type="range" min="0" max="60" value="0" step="1" oninput="slidePauseDurationRangeSlider()">
+      <button id="pauseDurationIncrement" onclick="incrementPauseDuration()"> + </button>
+    </div>
+    <div class="full">
+      <button id="optionsButton" onclick="toggleOptions()" class="optionsButtonClass">Meer opties (+)</button>
+      <div class="right">
+        <label class="switch">
+          <input id="countdown" type="checkbox" checked>
+          <span class="slider round"></span>
+        </label>
+        <label id="countdownText"> Aftellen </label>
+      </div>
+    </div>
+    <div class="extraOptions hidden">
+      <div>
+        <label> Tussentellen: </label>
+        <output id="tussentellenText" class="output"> </output>
+      </div>
+      <div class="crementableRangeSlider">
+        <button id="tussentellenDecrement" onclick="decrementTussentellen()"> - </button>
+        <input id="tussentellenRangeSlider" type="range" min="0" max="99" value="0" step="1" oninput="slideTussentellenRangeSlider()">
+        <button id="tussentellenIncrement" onclick="incrementTussentellen()"> + </button>
+      </div>
+      <div>
+        <label> Herhalingen: </label>
+        <output id="repetitionsText" class="output"> </output>
+      </div>
+      <div class="crementableRangeSlider">
+        <button id="repetitionsDecrement" onclick="decrementRepetitions()"> - </button>
+        <input id="repetitionsRangeSlider" type="range" min="0" max="99" value="0" step="1" oninput="slideRepetitionsRangeSlider()">
+        <button id="repetitionsIncrement" onclick="incrementRepetitions()"> + </button>
+      </div>
+      <div>
+        <label> Reeks: </label>
+        <select id="operator">
+          <option value="null"> operator </option>
+          <option value="addition"> + </option>
+          <option value="subtraction"> - </option>
+          <option value="multiplication"> * </option>
+          <option value="division" > / </option>
+          <option value="modulus" > % </option>
+        </select>
+        <output id="operandText" class="output"> </output>
+      </div>
+      <div class="crementableRangeSlider">
+        <button id="operandDecrement" onclick="decrementOperand()" disabled> - </button>
+        <input id="operandRangeSlider" type="range" min="0" max="99" value="1" step="1" oninput="slideOperandRangeSlider()">
+        <button  id="operandIncrement" onclick="incrementOperand()"> + </button>
+      </div>
+    </div>
+    <div class="mediaControls">
+      <button id="pauseButton" class="pauseButtons" onclick="pause()" disabled></button>
+      <button id="stopButton" class="stopButtons" onclick="stop()" disabled></button>
+      <button id="startButton" class="playButtons" onclick="start()"></button>
+    </div>
+    <div class="mediaControls">
+      <button id="changePaceButton" onclick="testPrint()" onmousedown="changePaceDown()" ontouchstart="changePaceDown()" ontouchend="changePaceUp()" ontouchcancel="changePaceUp()" onmouseup="changePaceUp()" disabled>
+        <span id="leftChangePaceButton" class="nextButtonsLeft"></span>
+        <span id="rightChangePaceButton" class="nextButtons"></span>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js" type="text/javascript"></script>
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('./sw.js')
+               .then(function() {
+                                  alert("Registered");});
+
+    }
+    else {
+      alert("not registered");
+      //alert("Klik op ⏍ en hierna op 'Zet in beginscherm' om te gebruiken als normale app.");
+
+    }
+  </script>
+
+</body>
+</html>

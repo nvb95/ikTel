@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  font-family: "Courier New";
+  font-size: 2vh;
+  color: black;
+  font-weight: bold;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+select {
+  font-family: "Courier New";
+}
+
+header {
+  padding-top: 4vh;
+  padding-bottom: 2vh;
+  text-align: center;
+  font-size: 4vh;
+}
+
+header select {
+  font-size: 3vh;
+}
+
+.main {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.main select {
+  font-size: 2vh;
+}
+
+div[id="printDiv"] {
+  text-align: center;
+  font-size: 5vh;
+}
+
+button {
+  background:none;
+  border:none;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New";
+  font-size: 4vh;
+  color: #72af2f;
+  font-weight: bold;
+}
+
+input[type=range] {
+  height: 4.5vh;
+  width: 80vw;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  border-radius: 50%;
+  height: 4.5vh;
+  width: 4.5vh;
+}
+
+input[type=range]::-moz-range-thumb {
+  border-radius: 50%;
+  height: 4.5vh;
+  width: 4.5vh;
+}
+
+input[type=range]::-ms-thumb {
+  border-radius: 50%;
+  height: 4.5vh;
+  width: 4.5vh;
+}
+
+.stopButtons {
+  width: 4.5vh;
+  height: 4.5vh;
+  border-top: 4.5vh;
+  border-left: 4.5vh solid;
+}
+
+.pauseButtons {
+    width: 4.5vh;
+    height: 4.5vh;
+    border-top: 4.5vh;
+    border-right: 1.75vh solid;
+    border-left: 1.75vh solid;
+}
+
+.playButtons {
+    position: relative;
+    top: -2.25vh;
+    width: 4.5vh;
+    height: 4.5vh;
+    border-top: 2.25vh solid transparent;
+    border-left: 4.5vh solid;
+    border-bottom: 2.25vh solid transparent;
+}
+
+.smallNextButtons, .smallNextButtonsLeft {
+  position: absolute;
+  top: 75vh;
+  border-top: 13vh solid transparent;
+  border-left: 45vw solid;
+  border-bottom: 13vh solid transparent;
+}
+
+.nextButtons, .nextButtonsLeft {
+  position: absolute;
+  top: 50vh;
+  border-top: 25vh solid transparent;
+  border-left: 45vw solid;
+  border-bottom: 25vh solid transparent;
+}
+
+.nextButtonsLeft, .smallNextButtonsLeft {
+  left: 6vw;
+}
+
+.optionsButtonClass {
+  font-size: 3vh;
+}
+
+.crementableRangeSlider, .mediaControls {
+  text-align: center;
+}
+
+.crementableRangeSlider button {
+  color: #72af2f;
+  font-size: 4.5vh;
+}
+
+
+
+/*input[type=range]::-webkit-slider-thumb {
+  visibility: hidden;
+  height: 4vh;
+  width: 4vh;
+}
+
+input[type=range]::-moz-range-thumb {
+  visibility: hidden;
+  height: 4vh;
+  width: 4vh;
+}
+
+input[type=range]::-ms-thumb {
+  visibility: hidden;
+  height: 4vh;
+  width: 4vh;
+}
+
+.show input[type=range]::-webkit-slider-thumb {
+  visibility: visible;
+}
+
+.show input[type=range]::-moz-range-thumb {
+  visibility: visible;
+}
+
+.show input[type=range]::-ms-thumb {
+  visibility: visible;
+}
+
+.show button {
+  visibility: visible;
+}*/
+
+/* .mediaControls button {
+  visibility: visible;
+  color: white;
+} */
+
+
+
+.right {
+  float: right;
+}
+
+.full {
+  height: 4vh;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 5vh;
+  height: 3vh;
+}
+
+.switch input {
+  display:none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+  -moz-transition: .25s;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 2.5vh;
+  width: 2.5vh;
+  left: 0.25vh;
+  bottom: 0.25vh;
+  background-color: white;
+  -webkit-transition: .25s;
+  -moz-transition: .25s;
+  transition: .25s;
+}
+
+input:checked + .slider {
+  background-color: #72af2f;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(2vh);
+  -ms-transform: translateX(2vh);
+  transform: translateX(2vh);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 2vh;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+ .hidden {
+  display: none;
+}
+
+button:disabled, .pressed{
+  color: gray;
+}

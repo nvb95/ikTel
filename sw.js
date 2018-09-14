@@ -72,6 +72,7 @@ var filesToCache = [
 self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
+      alert("all cashed");
       return cache.addAll(filesToCache);
     })
   );

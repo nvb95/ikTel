@@ -3,7 +3,7 @@
   "short_name": "ikTel",
   "description": "Telt hardop zodat jij gelijktijdig feedback kan geven.",
   "lang": "nl",
-  "start_url": "https://nvb95.github.io/ikTel/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "icons": [
     {

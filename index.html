@@ -150,13 +150,29 @@
 
   <script src="script.js" type="text/javascript"></script>
   <script>
-    if('serviceWorker' in navigator) {
-      navigator.serviceWorker
-               .register('/sw.js')
-               .then(function() {
-                                  alert("Registered");});
+    // if('serviceWorker' in navigator) {
+    //   navigator.serviceWorker
+    //            .register('/sw.js')
+    //            .then(function() {
+    //                               alert("Registered");});
+    //
+    // }
+    if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(function(reg) {
 
+    if(reg.installing) {
+      console.log('Service worker installing');
+    } else if(reg.waiting) {
+      console.log('Service worker installed');
+    } else if(reg.active) {
+      console.log('Service worker active');
     }
+
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+}
     else {
       alert("not registered");
       //alert("Klik op ⏍ en hierna op 'Zet in beginscherm' om te gebruiken als normale app.");

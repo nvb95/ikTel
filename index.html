@@ -158,7 +158,7 @@
     //
     // }
     if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/ikTel/sw.js').then(function(reg) {
+  navigator.serviceWorker.register('/ikTel/sw.js', {scope: '/ikTel/'}).then(function(reg) {
 
     if(reg.installing) {
       console.log('Service worker installing');
